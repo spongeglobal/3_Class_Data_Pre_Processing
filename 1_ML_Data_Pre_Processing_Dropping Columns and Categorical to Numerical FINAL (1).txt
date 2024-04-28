@@ -1,0 +1,17 @@
+
+import pandas as pd
+df_SAM = pd.read_csv (r'C:\Users\Acer\SAM_HR_Dataset_Pre_Recruitment.csv')
+
+----------------------------------------------------------------------------------------------------------------------
+# Making CATOGORICAL Columns NUMERICAL/ Keep on Doing Untill you convert all needed
+
+from sklearn.preprocessing import LabelEncoder
+number=LabelEncoder()
+df_SAM['MaritalStatus']=number.fit_transform(df_SAM['MaritalStatus'].astype('str'))
+df_SAM['MaritalStatus']=number.fit_transform(df_SAM['MaritalStatus'].astype('str'))
+
+
+-----------------------------------------------------------------------------------------------------------------------
+# Export CSV
+df.to_csv('file_name.csv')
+-------------------------------------------------------------------
